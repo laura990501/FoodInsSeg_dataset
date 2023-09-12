@@ -108,15 +108,15 @@
                   </span> -->
 
                   <!-- Github link -->
-                  <!-- <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  <span class="link-block">
+                    <a href="https://github.com/jamesjg/FoodInsSeg/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
                   </a>
-                </span> -->
+                </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
@@ -168,34 +168,19 @@
       </span>
       <strong>Download_Baidu</strong>
     </a>
+
+    <a href=" https://github.com/jamesjg/FoodInsSeg/blob/main/eval.py" class="button is-primary">
+      <span class="icon">
+        <i class="fa fa-star"></i>
+      </span>
+      <strong>Evaluation Tool</strong>
+    </a>
+
   </div>
 </section>
 <!-- End download section -->
 
-<!-- <section class="section">
-  <div class="container">
 
-    <div class="box">
-      <h2 class="title is-4">Dataset Download Agreement</h2>
-
-      <p>Dear researcher, thank you for your interest! The FoodInsSeg dataset is available only for non-commercial research purposes. To ensure proper use, researchers accessing the dataset should abide by the following principles:</p>
-
-      <ol>
-        <li>The dataset is intended for non-commercial research only. Any commercial use is prohibited.</li>
-        <li>Unauthorized copying, publishing or distribution of the dataset is not permitted.</li>
-        <li>We reserve the right to terminate access at anytime. Users should voluntarily comply with the agreement.</li>
-      </ol>
-
-      <p>We sincerely hope FoodInsSeg will empower advances in computer vision and food recognition research. Please follow the agreement and properly cite the data source in your work.</p>
-      
-      <p class="has-text-right">
-        <strong>University of Chinese Academy of Sciences</strong><br>
-      </p>
-
-    </div>
-
-  </div>
-</section> -->
 
 <!DOCTYPE html>
 <html>
@@ -215,20 +200,18 @@
       <div class="box">
         <h2 class="title is-4">Dataset Download Agreement</h2>
 
-        <p>Dear researcher, thanks for your interest! </p>
+        <!-- <p>Researcher, thanks for your interest! </p> -->
         <p>The FoodInsSeg dataset is available only for non-commercial research purposes. To ensure responsible utilization of the dataset, researchers accessing it should adhere to the following guiding principles:</p>
-        
+        <br>
         <ol class="download-list">
           <li>The FoodInsSeg dataset is available for academic research only, commercial and any profit purposes are strictly prohibited</li>
           <li>Unauthorized redistribution, publication, or dissemination in any form is prohibited.</li>
           <li>We retain the right to terminate access at anytime. Users should voluntarily comply with the agreement.</li>
           <li>Please cite our work based on the BibTex information we have provided.</li>
         </ol>
+        <br>
         <p>We sincerely hope that FoodInsSeg will contribute to the progress of computer vision and food recognition research. We kindly request that you follow the agreement and properly cite the data source in your work.</p>
         
-        <p class="has-text-right">
-          <strong>University of Chinese Academy of Sciences</strong><br>
-        </p>
 
       </div>
 
@@ -237,6 +220,8 @@
 
 </body>
 </html>
+
+
 
 
 
@@ -250,11 +235,14 @@
           <p>
             Accurate food image segmentation is crucial for health applications like calorie estimation and recipe design. 
             However, many previous works only focus on food dishes, which cannot offer fine-grained ingredients to precisely estimate nutrition. 
-            To address this problem, we build FoodInsSeg, the first ingredient-level food instance segmentation benchmark dataset in the food segmentation field. 
-            This dataset contains a total of 7,118 food images, which have been annotated with 103 categories and 119,048 segmentation masks at ingredient level. 
-            Moreover, we also propose a novel and effective tool, named IngredientSAMTool, which leverages the Segment Anything Model and seamless manual operations to annotate the dataset. 
-            Experiments demonstrate the excellence of our proposed FoodInsSeg dataset for food instance segmentation task. 
-            Meanwhile, the FoodInsSeg dataset exhibits significant potential for further research involving food analysis.</p>
+            To address this problem, we build FoodInsSeg, the first ingredient-level food instance segmentation benchmark dataset in the food segmentation field.             
+            Following the practice of FoodSeg103, FoodInsSeg contains a total of 7,118 images with the same train and test splitting, where 4,983 images are used for training and 2,135 for testing. 
+            For each image, we provide individual masks for food items and label each item with one of the 103 food ingredient categories.
+            The whole dataset offers 119,048 instance masks, in which there are 82,716 for training and 36,332 for testing. 
+            In the test set, there is an average of 17.01 masks per image and a maximum of 186 masks in a single image. 
+            Whereas in the training set, there are on average 16.59 masks per image and up to 126 masks for a single image.
+
+          </p>
         </div>
       </div>
     </div>
@@ -262,13 +250,24 @@
 </section>
 <!-- End paper abstract -->
 
-
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static\images\data_statistics.png" alt="The distribution of food categories"/>
+      <h2 class="subtitle has-text-centered">
+         The distribution of food categories. The detailed statistic data can be found at the <a href="https://github.com/jamesjg/FoodInsSeg/blob/main/statistics.xls">excel file</a>.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title" style="text-align: center;">Visualization Comparison</h2>
+      <!-- <h2 class="title" style="text-align: center;">Visualization Comparison</h2> -->
 
       <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
       
