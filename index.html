@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>FoodInsSeg: An Ingredient-Level Food Instance Segmentation Benchmark</title>
+  <title>When Segment Anything Model Meets Food Instance Segmentation</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,21 +52,20 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">FoodInsSeg: An Ingredient-Level Food Instance Segmentation Benchmark</h1>
+            <h1 class="title is-1 publication-title">When Segment Anything Model Meets Food Instance Segmentation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jiayi Lyu</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hanyu Jian</a>,
+              </span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Hanyu Jiang</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Xing Lan</a>,
+                </span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xing Lan</a>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jiayi Lyu</a>,
                   </span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Kun Dong</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Tong Ning</a>,
                   </span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jian Xue</a>
@@ -78,10 +77,7 @@
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
-                  <div class="is-size-6 publication-authors">
-                    <span class="author-block">*the authors contribute equally to this work
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
-                  </div>
+
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -233,14 +229,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Accurate food image segmentation is crucial for health applications like calorie estimation and recipe design. 
-            However, many previous works only focus on food dishes, which cannot offer fine-grained ingredients to precisely estimate nutrition. 
-            To address this problem, we build FoodInsSeg, the first ingredient-level food instance segmentation benchmark dataset in the food segmentation field.             
-            Following the practice of FoodSeg103, FoodInsSeg contains a total of 7,118 images with the same train and test splitting, where 4,983 images are used for training and 2,135 for testing. 
-            For each image, we provide individual masks for food items and label each item with one of the 103 food ingredient categories.
-            The whole dataset offers 119,048 instance masks, in which there are 82,716 for training and 36,332 for testing. 
-            In the test set, there is an average of 17.01 masks per image and a maximum of 186 masks in a single image. 
-            Whereas in the training set, there are on average 16.59 masks per image and up to 126 masks for a single image.
+            The Segment Anything Model (SAM) has significantly advanced image segmentation through its exceptional zero-shot performance. 
+            However, it faces a significant limitation due to the lack of class-specific information.
+            To address this problem, we propose to leverage the category information given by semantic datasets for SAM. 
+            In this paper, we develop a powerful tool called InsSAM-Tool, which can adequately utilize class-specific information and SAM's segmentation capabilities to efficiently label instance segmentation. 
+            Furthermore, we leverage this tool to establish a groundbreaking dataset called FoodInsSeg, which is the first food instance dataset at ingredient level.
+            It contains a total of 7,118 food images, annotated with 103 categories and 119,048 instance masks. 
+            FoodInsSeg provides significant potential to catalyze further research into fine-grained food instance segmentation. 
 
           </p>
         </div>
@@ -281,15 +276,15 @@
         
         <div class="item">
           <!-- Your image here -->
-          <img src="static\images\IngredientSAMTool_v4_crop_1.png" alt="semantic results"/>
+          <img src="static\images\pipline_crop_v3.pdf" alt="semantic results"/>
         <h2 class="subtitle has-text-centered">
-          The construction process for the FoodInsSeg dataset.
+          The InsSAM-tool for the FoodInsSeg dataset.
         </h2>
         </div>
         
         <div class="item">
           <!-- Your image here -->
-          <img src="static\images\Fig4_mini_1.png" alt="semantic results"/>
+          <img src="static\images\tool_example.png" alt="semantic results"/>
         <h2 class="subtitle has-text-centered">
           The examples of manual annotation using IngredientSAMTool. The first row displays original images from the FoodSeg103 dataset (semantic level). The second row shows the individual masks without relabeling. The third row presents the manually labeled images.
         </h2>
